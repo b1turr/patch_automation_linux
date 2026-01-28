@@ -2,7 +2,7 @@
 
 LOG="/var/log/simple_patch.log"
 
-echo "=== Patch run started: $(date) ===" | tee -a "$LOG"
+echo "Patch run started: $(date) " | tee -a "$LOG"
 
 # Update package list
 apt update 2>&1 | tee -a "$LOG"
@@ -20,4 +20,5 @@ else
   echo "No reboot required." | tee -a "$LOG"
 fi
 
-echo "=== Patch run finished: $(date) ===" | tee -a "$LOG"
+echo "Patch run finished: $(date) " | tee -a "$LOG"
+
